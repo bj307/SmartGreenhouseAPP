@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/greenLight" />
+            <size android:width="67dp" android:height="67dp" />
+        </shape>
+    </item>
+    <!-- Camada branca -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/bgLoadHome" />
+        </shape>
+    </item>
+    <!-- Camada interna verde claro -->
+    <item android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/greenLight" />
+        </shape>
+    </item>
+</layer-list>
