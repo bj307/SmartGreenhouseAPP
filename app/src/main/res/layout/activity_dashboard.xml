@@ -44,20 +44,193 @@
                 android:src="@drawable/mimmagrao" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnControles"
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/custom_button_circle_connect"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/water_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="28dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/txtControles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_grotesk_medium"
+                    android:gravity="center"
+                    android:text="Controles"
+                    android:textColor="@color/bgLoadHome"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnPlantas"
+                    android:layout_width="63dp"
+                    android:layout_height="63dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/custom_button_circle_connect"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    app:icon="@drawable/plant_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="28dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/txtPlantas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/space_grotesk_medium"
+                    android:gravity="center"
+                    android:text="Plantas"
+                    android:textColor="@color/bgLoadHome"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="11dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="-40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cadastrar_planta" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/textViewCadastrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/space_grotesk_medium"
+                    android:text="Cadastrar Planta"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:shadowColor="#8c8c8c"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="5"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@color/grey_light"
+                    android:layout_height="160dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@color/grey_light"
+                    android:layout_height="160dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@color/grey_light"
+                    android:layout_height="160dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="11dp"
+                    app:cardElevation="0dp"
+                    android:backgroundTint="@color/grey_light"
+                    android:layout_height="160dp" />
+            </TableRow>
+
+        </TableLayout>
 
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/shape_nav_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="12dp">
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
