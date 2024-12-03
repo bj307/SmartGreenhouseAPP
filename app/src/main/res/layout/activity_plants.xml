@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.plants.PlantsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="29dp"
+        android:layout_marginTop="29dp"
+        tools:layout_editor_absoluteX="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/nomeEstufa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/space_grotesk_bold"
+            android:text="Olá Usuario"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_button_circle_connect"
+            android:clipToOutline="true"
+            android:outlineProvider="background"
+            android:src="@drawable/mimmagrao" />
+    </LinearLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#EAF3EA"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="#5B8E55"
+                    app:strokeWidth="1dp">
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_circle_connect"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:src="@drawable/mimmagrao" />
+                    <TextView
+                        android:layout_gravity="center|bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/space_grotesk_bold"
+                        android:text="Cactus red"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#EAF3EA"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="#5B8E55"
+                    app:strokeWidth="1dp"
+                    >
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_circle_connect"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:src="@drawable/mimmagrao" />
+                    <TextView
+                        android:layout_gravity="center|bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/space_grotesk_bold"
+                        android:text="Cactus red"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#EAF3EA"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="#5B8E55"
+                    app:strokeWidth="1dp"
+                    >
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_circle_connect"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:src="@drawable/mimmagrao" />
+                    <TextView
+                        android:layout_gravity="center|bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/space_grotesk_bold"
+                        android:text="Cactus red"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#EAF3EA"
+                    app:cardCornerRadius="8dp"
+                    app:strokeColor="#5B8E55"
+                    app:strokeWidth="1dp"
+                    >
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button_circle_connect"
+                        android:clipToOutline="true"
+                        android:outlineProvider="background"
+                        android:src="@drawable/mimmagrao" />
+                    <TextView
+                        android:layout_gravity="center|bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/space_grotesk_bold"
+                        android:text="Cactus red"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
