@@ -1,15 +1,18 @@
 package com.example.smartgreenhouseapp.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import com.example.smartgreenhouseapp.ExemploPlanta
 import com.example.smartgreenhouseapp.R
 import com.example.smartgreenhouseapp.databinding.ActivityDashboardBinding
 import com.example.smartgreenhouseapp.model.CredentialModel
+
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -37,6 +40,17 @@ class DashboardActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        val cardView  = findViewById<CardView>(R.id.cardView);
+
+
+        cardView.setOnClickListener {
+            val intent = Intent(this, ExemploPlanta::class.java)
+            intent.putExtra("IMAGE_ID", R.drawable.cadastrar_planta)
+            startActivity(intent)
+        }
+
 
     }
 
