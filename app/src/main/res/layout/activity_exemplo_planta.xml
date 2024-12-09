@@ -30,12 +30,12 @@
         android:layout_width="240dp"
         android:layout_height="207dp"
         android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307"
-        app:srcCompat="@drawable/exemplo_planta"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="UnknownId" />
 </androidx.constraintlayout.widget.ConstraintLayout>
