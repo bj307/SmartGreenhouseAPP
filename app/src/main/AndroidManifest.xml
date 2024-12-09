@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SmartGreenhouseAPP.Splash"
         tools:targetApi="31">
         <activity
-            android:name=".ExemploPlanta"
+            android:name=".ui.plantdetails.ExemploPlanta"
             android:exported="false" />
         <activity
             android:name=".ui.profile.ProfileActivity"
