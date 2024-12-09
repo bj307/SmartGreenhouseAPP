@@ -8,7 +8,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
-import com.example.smartgreenhouseapp.ExemploPlanta
+import com.example.smartgreenhouseapp.ui.plantdetails.ExemploPlanta
 import com.example.smartgreenhouseapp.R
 import com.example.smartgreenhouseapp.databinding.ActivityDashboardBinding
 import com.example.smartgreenhouseapp.model.CredentialModel
