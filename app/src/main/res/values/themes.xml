@@ -12,6 +12,11 @@
         <item name="backgroundTint">@null</item>
     </style>
 
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light">
+        <!-- Personalize os atributos do tema claro aqui -->
+        <item name="colorPrimary">@color/bgApp</item>
+    </style>
+
     <style name="Theme.SmartGreenhouseAPP.Splash" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowSplashScreenBackground">@color/bgLoadHome</item> <!-- Verde -->
         <item name="android:windowSplashScreenIconBackgroundColor">@color/bgLoadHome</item> <!-- Verde -->
