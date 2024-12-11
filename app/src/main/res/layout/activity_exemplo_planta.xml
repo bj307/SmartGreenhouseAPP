@@ -14,7 +14,7 @@
         android:fontFamily="@font/space_grotesk_medium"
         android:text="Exemplo de planta"
         android:textColor="@color/text"
-        android:textSize="26sp"
+        android:textSize="25sp"
 
 
         android:textStyle="bold"
@@ -24,6 +24,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.052" />
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -36,6 +37,256 @@
         app:layout_constraintHorizontal_bias="0.385"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.225"
         tools:ignore="UnknownId" />
+
+
+    <LinearLayout
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <!-- Imagem à esquerda -->
+
+        <!-- Textos (Nome e Descrição) -->
+        <ImageView
+            android:id="@+id/imageLayout1"
+            android:layout_width="52dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/water" />
+
+        <LinearLayout
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Nome (Humidade) -->
+
+            <!-- Descrição -->
+            <TextView
+                android:id="@+id/tLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Humidade"
+                android:textColor="#91D0CC"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tDescricaoPlaneta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="47%"
+                android:textColor="#5FBAB4"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586">
+
+        <!-- Imagem à esquerda -->
+
+        <!-- Textos (Nome e Descrição) -->
+        <ImageView
+            android:id="@+id/imageLayout2"
+            android:layout_width="52dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/sun" />
+
+        <LinearLayout
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Nome (Humidade) -->
+
+            <!-- Descrição -->
+            <TextView
+                android:id="@+id/tLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Temperatura"
+                android:textColor="#91D0CC"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tTemperatura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="23C"
+                android:textColor="#5FBAB4"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68">
+
+        <!-- Imagem à esquerda -->
+
+        <!-- Textos (Nome e Descrição) -->
+        <ImageView
+            android:id="@+id/imageLayout3"
+            android:layout_width="52dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/maximize" />
+
+        <LinearLayout
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!-- Nome (Humidade) -->
+
+            <!-- Descrição -->
+            <TextView
+                android:id="@+id/tLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Tamanho"
+                android:textColor="#91D0CC"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tTemanho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="7,3cm"
+                android:textColor="#5FBAB4"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767">
+
+        <!-- Imagem à esquerda -->
+
+        <!-- Textos (Nome e Descrição) -->
+
+        <ImageView
+            android:id="@+id/imageLayout4"
+            android:layout_width="52dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/innovation" />
+
+        <LinearLayout
+            android:layout_width="243dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Luminosidade"
+                android:textColor="#91D0CC"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tLuminosidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="150 lux"
+                android:textColor="#5FBAB4"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btnControle"
+            android:layout_width="66dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_button_circle_connect"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:icon="@drawable/water_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtControle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/space_grotesk_medium"
+            android:gravity="center"
+            android:text="Controles"
+            android:textColor="@color/bgLoadHome"
+            android:textSize="14sp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
