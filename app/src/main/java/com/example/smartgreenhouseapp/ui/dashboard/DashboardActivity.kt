@@ -1,23 +1,31 @@
 package com.example.smartgreenhouseapp.ui.dashboard
 
+import PlantaAdapter
+import PlantaModel
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.smartgreenhouseapp.ui.plantdetails.ExemploPlanta
 import com.example.smartgreenhouseapp.R
 import com.example.smartgreenhouseapp.databinding.ActivityDashboardBinding
 import com.example.smartgreenhouseapp.model.CredentialModel
+import com.example.smartgreenhouseapp.repository.DatabaseRepository
 
 
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDashboardBinding
     private lateinit var viewModel: DashboardViewModel
+    private lateinit var databaseRepository: DatabaseRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,18 +50,31 @@ class DashboardActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val recyclerView: RecyclerView = findViewById(R.id.recyclerViewPlantas)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        databaseRepository = DatabaseRepository()
 
+        val codigoSmartpei = "A1B2C3D4E5"
 
-        val cardView  = findViewById<CardView>(R.id.cardView);
+        // Chama o método para buscar as plantas
+        databaseRepository.buscarPlantas(codigoSmartpei) { resultado ->
+            if (resultado.sucesso) {
+                val plantas = resultado.objeto as List<PlantaModel>
 
+                // Configura o Adapter com a lista de plantas
+                val adapter = PlantaAdapter(plantas) { planta ->
+                    // Configura o clique no card para abrir outra Activity
+                    val intent = Intent(this, ExemploPlanta::class.java)
+                    intent.putExtra("PLANTA", planta)
+                    startActivity(intent)
+                }
+                recyclerView.adapter = adapter
+                recyclerView.layoutManager = LinearLayoutManager(this)
+            } else {
+                Toast.makeText(this, resultado.mensagem, Toast.LENGTH_SHORT).show()
+            }
 
-        cardView.setOnClickListener {
-            val intent = Intent(this, ExemploPlanta::class.java)
-            intent.putExtra("IMAGE_ID", R.drawable.cadastrar_planta)
-            startActivity(intent)
         }
-
-
     }
 
     private fun observeViewModel() {

@@ -290,4 +290,29 @@ class DatabaseRepository {
                 )
             }
     }
+
+    // Método para atualizar a lista de plantas
+    fun atualizarListaDePlantas(codigoSmartpei: String, callback: (ResultadoOperacao) -> Unit) {
+        // Chama o método de buscar plantas do Firestore
+        buscarPlantas(codigoSmartpei) { resultado ->
+            if (resultado.sucesso) {
+                val plantas = resultado.objeto as List<PlantaModel>
+                callback(
+                    ResultadoOperacao(
+                        mensagem = "Lista de plantas atualizada",
+                        sucesso = true,
+                        objeto = plantas
+                    )
+                )
+            } else {
+                callback(
+                    ResultadoOperacao(
+                        mensagem = "Erro ao atualizar lista de plantas: ${resultado.mensagem}",
+                        sucesso = false,
+                        objeto = null
+                    )
+                )
+            }
+        }
+    }
 }
