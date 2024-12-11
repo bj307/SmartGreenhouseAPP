@@ -13,5 +13,6 @@ data class PlantaModel(
     val luminosidadeIdeal: String = "",
     val tamanho: String = "",
     val observacao: String = "",
-    val codigoSensor: String = ""
+    val codigoSensor: String = "",
+    val imageRef: String = ""
 ) : Parcelable
