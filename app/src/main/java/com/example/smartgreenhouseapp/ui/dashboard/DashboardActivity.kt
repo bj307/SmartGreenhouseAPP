@@ -32,6 +32,8 @@ class DashboardActivity : AppCompatActivity() {
         credential?.let {
             viewModel.setCredential(it)
             viewModel.listenToCredentialUpdates(it.codigo)
+            viewModel.ouvirAlteracoesPlantas(it.codigo)
+            viewModel.buscarTodasPlantas(it.codigo)
         }
         observeViewModel()
 
