@@ -4,6 +4,7 @@ import PlantaAdapter
 import PlantaModel
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,8 @@ import com.example.smartgreenhouseapp.R
 import com.example.smartgreenhouseapp.databinding.ActivityDashboardBinding
 import com.example.smartgreenhouseapp.model.CredentialModel
 import com.example.smartgreenhouseapp.repository.DatabaseRepository
+import com.example.smartgreenhouseapp.ui.cadastraPlanta
+
 
 
 class DashboardActivity : AppCompatActivity() {
@@ -50,6 +53,20 @@ class DashboardActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val imageView = findViewById<ImageView>(R.id.imageBackground)
+        imageView.setOnClickListener {
+            val intent = Intent(this, cadastraPlanta::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        atualizarListaDePlantas()
+    }
+
+    private fun atualizarListaDePlantas() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerViewPlantas)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         databaseRepository = DatabaseRepository()
@@ -73,7 +90,6 @@ class DashboardActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, resultado.mensagem, Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
