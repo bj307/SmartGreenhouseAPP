@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cadastraPlanta">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exemplo De Planta"
+            android:textSize="18sp"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="16dp" />
+
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/ivPlantImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/exemplo_planta"
+                android:scaleType="centerCrop"
+                android:background="@drawable/exemplo_planta" />
+
+            <ImageView
+                android:id="@+id/ivAddButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/add_15999657"
+                android:padding="4dp" />
+        </FrameLayout>
+
+        <!-- Campo nome da planta -->
+        <EditText
+            android:id="@+id/etPlantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nome da Planta"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/etHumidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Humidade ideal da planta"
+            android:layout_marginBottom="8dp"
+            android:padding="12dp" />
+
+
+        <!-- Campo tamanho -->
+        <EditText
+            android:id="@+id/etPlantSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="7,3cm"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="10 C"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etLuminosidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="10 lux"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Botão salvar -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALVAR"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
