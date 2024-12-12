@@ -53,4 +53,4 @@ Para mais informações, consulte a [documentação oficial do Firebase](https:/
 
 ---
 
-Desenvolvido com ❤️ por [Seu Nome](https://github.com/seu-usuario)
+Desenvolvido com ❤️ por [Walmir](https://github.com/Wal221), [Kaio](https://github.com/bj307), [Darcson](https://github.com/DarcsonLanucio)
